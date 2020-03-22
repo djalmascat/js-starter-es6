@@ -1,10 +1,26 @@
 "use strict";
 
-var soma = function soma() {
-  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
-  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 6;
-  return a + b;
+var usuario = {
+  nome: 'Bruno',
+  idade: 36,
+  endereco: {
+    cidade: 'Aracaju',
+    estado: 'SE'
+  }
 };
+/*
+const { nome, idade, endereco: { cidade }} = usuario;
+console.log(nome);
+console.log(idade);
+console.log(cidade);
+*/
 
-console.log(soma(1));
-console.log(soma());
+function mostraNome(_ref) {
+  var nome = _ref.nome,
+      idade = _ref.idade,
+      estado = _ref.endereco.estado;
+  console.log(nome, idade, estado);
+}
+
+;
+mostraNome(usuario);
